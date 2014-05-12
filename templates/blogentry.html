@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Achint's CS 253 Blog</title>
+  </head>
+
+  <link type="text/css" rel="stylesheet" href="/static/main.css">
+
+  </style>
+
+  <body>
+    {% include 'header.html' %}
+    <div class="post">
+      <div class="post-heading">
+        <div class="post-tite">{{subject}}</div>
+        <div class="post-date">{{created}}</div>
+      </div>
+      <div class="post-content">{{content}}</div>
+    </div>
+    <br><br>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Achint's CS 253 Blog Login</title>
+  </head>
+
+  <link type="text/css" rel="stylesheet" href="/static/main.css">
+</style>
+  <body>
+  	{% include 'header.html' %}
+	<form method="post">
+		<table>
+		<tr>
+		  <td>Username</td>
+		  <td><input name="username" value="{{username}}"></td>		  
+		</tr>
+		<tr>
+		  <td>Password</td>
+		  <td><input type="password" name="password"></td>
+		</tr>		
+		</table>
+		<span class="error">{{errorLogin}}</span><br>
+		<input type="submit">
+	  </form>
+	</body>
+</html>
