@@ -24,15 +24,16 @@ from signup import *
 from welcome import *
 from login import *
 from logout import *
+from jsonHandler import *
 
 app = webapp2.WSGIApplication([
-	('/', FrontHandler),
+	('/?(?:\.json)?', FrontHandler),
 	('/login', LoginHandler),
 	('/logout', LogoutHandler),
 	('/welcome',WelcomeHandler),
 	('/signup', SignUpHandler),    
     ('/newpost', NewPostHandler),
-    ('/(\d+)', BlogPostHandler)
+    ('/(\d+)(?:\.json)?', BlogPostHandler),    
 
 ], debug=True)
 

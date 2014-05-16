@@ -14,7 +14,7 @@
     <div class="post">
       <div class="post-heading">
         <div class="post-tite"><a href="/{{entry.key().name()}}">{{entry.subject}}</a></div>
-        <div class="post-date">{{entry.created}}</div>
+        <div class="post-date">{{entry.created.strftime("%d %b %Y %H:%M:%S")}}</div>
       </div>
       <div class="post-content">{{entry.content}}</div>
     </div>

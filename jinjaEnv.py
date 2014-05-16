@@ -43,3 +43,7 @@ class JinjaHandler(webapp2.RequestHandler):
 		webapp2.RequestHandler.initialize(self, *a, **kvpairs)
 		uid = self.readSecureCookie('user-id')
 		self.user = uid and Users.get_by_id(uid)
+		if self.request.url.endswith('.json'):
+			self.format = 'json'
+		else:
+			self.format = 'html'

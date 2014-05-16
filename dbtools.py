@@ -7,6 +7,14 @@ class BlogPosts(db.Model):
 	content = db.TextProperty(required=True)
 	created = db.DateTimeProperty(auto_now_add=True)
 
+	def as_dict(self):
+		timeFormat = "%d %b %Y %H:%M:%S"
+		d = { 	'subject' : self.subject,
+				'content' : self.content,
+				'created' : self.created.strftime(timeFormat)}
+		return d
+
+
 class Users(db.Model):	
 	username = db.StringProperty(required=True)
 	password = db.StringProperty(required=True)

@@ -18,8 +18,8 @@ class NewPostHandler(JinjaHandler):
 		if subject and content:
 			#Database entry
 			dt = datetime.datetime.now()
-			key = "%d%d%d%d%d" % (	dt.year, dt.month, dt.day, 
-									dt.hour, dt.minute)
+			key = "%d%d%d%d%d%d%d" % (	dt.year, dt.month, dt.day, 
+									dt.hour, dt.minute, dt.second, dt.microsecond)
 			BlogPosts.get_or_insert(key, subject=subject, content=content)
 			self.redirect("/"+key)
 		else:
